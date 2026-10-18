@@ -1,0 +1,16 @@
+{
+  "name": "greek-lawyer",
+  "version": "0.1.0",
+  "description": "Προσωπικός Δικηγόρος / Personal Lawyer — bilingual (EL/EN) Greek-law chat prototype",
+  "main": "server.js",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch --env-file-if-exists=.env server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
