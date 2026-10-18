@@ -4,51 +4,50 @@
 
   const UI = {
     appName: L('Προσωπικός Δικηγόρος', 'Personal Lawyer'),
-    tagline: L('Νομική καθοδήγηση στο ελληνικό δίκαιο', 'Legal guidance on Greek law'),
-    heroTitle: L('Πείτε μας τι συμβαίνει.<br><em>Θα το δούμε νομικά.</em>', 'Tell us what happened.<br><em>We’ll look at it legally.</em>'),
-    heroSub: L('Επιλέξτε το αντικείμενο της υπόθεσής σας. Θα σας κάνω λίγες στοχευμένες ερωτήσεις και μετά συνεχίζουμε σε ελεύθερη συζήτηση — με άρθρα, νομολογία, βήματα και προθεσμίες.',
-      'Pick the area of your matter. I’ll ask a few targeted questions, then we continue in a free conversation — with articles, case law, next steps and deadlines.'),
-    chooseArea: L('Επιλέξτε αντικείμενο', 'Choose an area'),
+    tagline: L('Φιλική νομική καθοδήγηση, με απλά λόγια', "Friendly legal guidance, in plain words"),
+    heroTitle: L('Πες μου τι συμβαίνει.<br><em>Θα το δούμε μαζί, με απλά λόγια.</em>', "Tell me what’s going on.<br><em>We’ll figure it out together, in plain words.</em>"),
+    heroSub: L('Μην ανησυχείς — δεν χρειάζεσαι νομικές γνώσεις. Διάλεξε το θέμα σου, απάντησε σε λίγες απλές ερωτήσεις και μετά τα λέμε σαν σε κουβέντα. Θα σου εξηγώ τα πάντα απλά, θα σου προτείνω επιλογές και θα σου λέω κι ένα-δυο πράγματα που ίσως δεν ήξερες.', "No worries — you don’t need to know any law. Pick your topic, answer a few simple questions, then we just chat. I’ll explain everything simply, suggest options, and share a thing or two you might not know."),
+    chooseArea: L('Με τι θέμα θέλεις βοήθεια;', "What do you need help with?"),
     newCase: L('Νέα υπόθεση', 'New case'),
     history: L('Ιστορικό', 'History'),
     historyTitle: L('Ιστορικό υποθέσεων', 'Case history'),
-    historyEmpty: L('Δεν υπάρχουν αποθηκευμένες υποθέσεις ακόμη. Τα δεδομένα μένουν μόνο σε αυτή τη συσκευή.', 'No saved cases yet. Data stays on this device only.'),
+    historyEmpty: L('Δεν έχεις αποθηκευμένες υποθέσεις ακόμη — όταν ξεκινήσεις μία, θα τη βρεις εδώ. Όλα μένουν μόνο σε αυτή τη συσκευή.', "Nothing saved yet — once you start a case, you’ll find it here. Everything stays on this device only."),
     delete: L('Διαγραφή', 'Delete'),
     deleteConfirm: L('Να διαγραφεί αυτή η υπόθεση;', 'Delete this case?'),
     clearAll: L('Διαγραφή όλων', 'Delete all'),
     clearAllConfirm: L('Να διαγραφούν όλες οι υποθέσεις από αυτή τη συσκευή;', 'Delete all cases from this device?'),
     untitled: L('Υπόθεση χωρίς τίτλο', 'Untitled case'),
     close: L('Κλείσιμο', 'Close'),
-    demoBanner: L('Λειτουργία επίδειξης: δεν έχει οριστεί LLM_API_KEY — οι απαντήσεις είναι προκαθορισμένες.', 'Demo mode: LLM_API_KEY is not set — answers are canned.'),
-    privacy: L('Οι συζητήσεις αποθηκεύονται μόνο στον browser σας. Μην συμπεριλαμβάνετε προσωπικά δεδομένα που δεν είναι απαραίτητα.', 'Conversations are stored in your browser only. Avoid sharing personal data that isn’t necessary.'),
+    demoBanner: L('Λειτουργία επίδειξης: δεν έχει οριστεί LLM_API_KEY — οι απαντήσεις είναι προκαθορισμένες.', "Demo mode: LLM_API_KEY is not set — answers are canned."),
+    privacy: L('Οι συζητήσεις σου αποθηκεύονται μόνο στον browser σου. Γράψε ό,τι χρειάζεται, αλλά απόφυγε προσωπικά στοιχεία που δεν είναι απαραίτητα.', "Your conversations are saved in your browser only. Share what’s needed, but skip personal details that aren’t necessary."),
     footer: L('Ενημερωτική καθοδήγηση — δεν υποκαθιστά τη συμβουλή αδειούχου δικηγόρου.', 'Informational guidance — not a substitute for a licensed lawyer.'),
-    introBubble: L('Καλησπέρα. Θα σας κάνω μερικές σύντομες ερωτήσεις για να καταλάβω την υπόθεση. Μπορείτε να επιλέξετε μία απάντηση ή να γράψετε δική σας.',
-      'Hello. I’ll ask a few short questions to understand your matter. Pick a quick answer or write your own.'),
-    stepOf: L('Ερώτηση {n} από {total}', 'Question {n} of {total}'),
-    skip: L('Παράλειψη', 'Skip'),
+    introBubble: L('Γεια σου! Μην αγχώνεσαι, είμαι εδώ να βοηθήσω. Θα σε ρωτήσω λίγα απλά πράγματα για να καταλάβω τι συμβαίνει. Διάλεξε μια έτοιμη απάντηση ή γράψε τη δική σου — δεν υπάρχει λάθος απάντηση.', "Hi there! Don’t worry, I’m here to help. I’ll ask a few simple things to understand what’s going on. Pick a quick answer or write your own — there are no wrong answers."),
+    stepOf: L('Ερώτηση {n} από {total} — σχεδόν εκεί!', "Question {n} of {total} — almost there!"),
+    skip: L('Δεν ξέρω / Παράλειψη', "Not sure / Skip"),
     skipped: L('(παραλείφθηκε)', '(skipped)'),
     back: L('Πίσω', 'Back'),
-    freeTextPh: L('Γράψτε τη δική σας απάντηση…', 'Type your own answer…'),
-    descPh: L('Περιγράψτε με δικά σας λόγια τι συνέβη, ποιοι εμπλέκονται και τι θέλετε να πετύχετε…', 'Describe in your own words what happened, who is involved and what outcome you want…'),
+    freeTextPh: L('Ή γράψε με δικά σου λόγια…', "Or write it in your own words…"),
+    descPh: L('Πες μου με δικά σου λόγια τι έγινε, ποιοι εμπλέκονται και τι θα ήθελες να γίνει. Όσο μπορείς — δεν χρειάζονται νομικές λέξεις.', "Tell me in your own words what happened, who’s involved and what you’d like to happen. Whatever you can — no legal words needed."),
     send: L('Αποστολή', 'Send'),
     stop: L('Διακοπή', 'Stop'),
-    chatPh: L('Γράψτε το μήνυμά σας…', 'Write your message…'),
+    chatPh: L('Ρώτα με ό,τι θέλεις ή διάλεξε μια επιλογή από πάνω…', "Ask me anything, or pick an option above…"),
     context: L('Πλαίσιο υπόθεσης', 'Case context'),
     copy: L('Αντιγραφή', 'Copy'),
     copied: L('Αντιγράφηκε', 'Copied'),
     retry: L('Δοκιμάστε ξανά', 'Try again'),
-    errGeneric: L('Δεν ήταν δυνατή η απάντηση. Ελέγξτε τη σύνδεση ή τις ρυθμίσεις του διακομιστή.', 'Could not get an answer. Check your connection or the server settings.'),
-    errRate: L('Πολλά αιτήματα. Περιμένετε λίγο και δοκιμάστε ξανά.', 'Too many requests. Please wait a moment and try again.'),
-    thinking: L('Ο δικηγόρος γράφει…', 'The lawyer is writing…'),
-    you: L('Εσείς', 'You'),
-    lawyer: L('Δικηγόρος', 'Lawyer'),
+    errGeneric: L('Ωχ, κάτι δεν πήγε καλά και δεν κατάφερα να απαντήσω. Έλεγξε τη σύνδεσή σου και δοκίμασε ξανά.', "Oops, something went wrong and I couldn’t answer. Check your connection and try again."),
+    errRate: L('Ουφ, στείλαμε πολλά μηνύματα μαζί! Περίμενε λίγο και δοκίμασε ξανά.', "Whoa, that was a lot of messages at once! Give it a moment and try again."),
+    thinking: L('Σκέφτομαι την απάντηση…', "Thinking it through…"),
+    you: L('Εσύ', "You"),
+    lawyer: L('Δικηγόρος', "Lawyer"),
     sourcesTitle: L('Αναζήτηση νομολογίας', 'Case-law search'),
     sourcesTerms: L('Όροι αναζήτησης', 'Search terms'),
-    sourcesNote: L('Ανοίγουν επίσημες πηγές σε νέα καρτέλα. Επαληθεύστε πάντα κάθε παραπομπή πριν βασιστείτε σε αυτήν.', 'Opens official sources in a new tab. Always verify any citation before relying on it.'),
+    sourcesNote: L('Ανοίγουν επίσημες πηγές σε νέα καρτέλα. Έλεγξε πάντα κάθε παραπομπή πριν βασιστείς σε αυτήν.', "Opens official sources in a new tab. Always double-check any citation before relying on it."),
     langLabel: L('Γλώσσα', 'Language'),
-    answerLangNote: L('Απαντώ στη γλώσσα που γράφετε.', 'I reply in the language you write in.'),
-    descQuestion: L('Περιγράψτε μου την υπόθεσή σας.', 'Please describe your matter.'),
-    finalReady: L('Ευχαριστώ. Αναλύω την υπόθεση…', 'Thank you. Analysing your matter…')
+    answerLangNote: L('Απαντώ στη γλώσσα που γράφεις.', "I reply in the language you write in."),
+    descQuestion: L('Τέλεια, σχεδόν τελειώσαμε! Πες μου με δικά σου λόγια τι συνέβη.', "Great, almost done! Tell me in your own words what happened."),
+    optionsLabel: L('Πάμε παρακάτω; Διάλεξε μία επιλογή:', 'Where to next? Pick an option:'),
+    finalReady: L('Ευχαριστώ που τα μοιράστηκες. Το κοιτάζω αμέσως…', "Thanks for sharing that. Let me take a look right away…")
   };
 
   // Source search links (labels/descriptions are bilingual; URLs built in app.js)
@@ -87,7 +86,7 @@
       blurb: L('Μήνυση, δίωξη, απολογία, ποινές', 'Complaints, charges, defence, penalties'),
       topicEl: 'ποινικό δίκαιο', topicEn: 'criminal proceedings',
       questions: [
-        { q: L('Ποια είναι η θέση σας στην υπόθεση;', 'What is your role in the matter?'), chips: [L('Θύμα / παθών', 'Victim'), L('Ύποπτος / κατηγορούμενος', 'Suspect / accused'), L('Μάρτυρας', 'Witness'), L('Συγγενής', 'Relative')] },
+        { q: L('Ποια είναι η θέση σου στην υπόθεση;', 'What is your role in this?'), chips: [L('Θύμα / παθών', 'Victim'), L('Ύποπτος / κατηγορούμενος', 'Suspect / accused'), L('Μάρτυρας', 'Witness'), L('Συγγενής', 'Relative')] },
         { q: L('Σε ποιο στάδιο βρίσκεται;', 'What stage is it at?'), chips: [L('Δεν έχει γίνει καταγγελία', 'No complaint filed yet'), L('Έχω κληθεί για εξηγήσεις / απολογία', 'Called for explanations / defence'), L('Εκκρεμεί δίκη', 'Trial pending'), L('Έχει εκδοθεί απόφαση', 'A judgment was issued')] },
         WHEN
       ]
@@ -99,7 +98,7 @@
       topicEl: 'αστική ευθύνη αποζημίωση', topicEn: 'civil liability damages',
       questions: [
         { q: L('Τι αφορά κυρίως η διαφορά;', 'What is the dispute mainly about?'), chips: [L('Αποζημίωση / ζημιά', 'Compensation / damage'), L('Παραβίαση σύμβασης', 'Breach of contract'), L('Απλήρωτη οφειλή', 'Unpaid debt'), L('Γειτονική / προσωπική διαφορά', 'Neighbour / personal dispute')] },
-        { q: L('Υπάρχει γραπτό αποδεικτικό υλικό;', 'Is there written evidence?'), chips: [L('Ναι, σύμβαση / έγγραφο', 'Yes, contract / document'), L('Μόνο μηνύματα / email', 'Only messages / emails'), L('Όχι', 'No'), L('Δεν ξέρω', 'Not sure')] },
+        { q: L('Έχεις κάτι γραπτό που να το αποδεικνύει;', 'Do you have anything in writing that shows it?'), chips: [L('Ναι, σύμβαση / έγγραφο', 'Yes, contract / document'), L('Μόνο μηνύματα / email', 'Only messages / emails'), L('Όχι', 'No'), L('Δεν ξέρω', 'Not sure')] },
         { q: L('Περίπου ποιο είναι το ποσό;', 'What is the approximate amount?'), chips: [L('Κάτω από 1.000 €', 'Under €1,000'), L('1.000 – 5.000 €', '€1,000 – 5,000'), L('5.000 – 50.000 €', '€5,000 – 50,000'), L('Πάνω από 50.000 €', 'Over €50,000')] },
         WHEN
       ]
@@ -110,7 +109,7 @@
       blurb: L('Εταιρείες, εταίροι, αφερεγγυότητα', 'Companies, partners, insolvency'),
       topicEl: 'εταιρικό δίκαιο εμπορικό', topicEn: 'company law commercial',
       questions: [
-        { q: L('Ποια είναι η νομική μορφή της επιχείρησης;', 'What is the legal form of the business?'), chips: [L('Ατομική επιχείρηση', 'Sole proprietorship'), L('ΙΚΕ / ΕΠΕ', 'ΙΚΕ / ΕΠΕ (private company)'), L('ΑΕ', 'ΑΕ (S.A.)'), L('ΟΕ / ΕΕ', 'ΟΕ / ΕΕ (partnership)')] },
+        { q: L('Τι είδους επιχείρηση είναι (νομική μορφή);', 'What kind of business is it (legal form)?'), chips: [L('Ατομική επιχείρηση', 'Sole proprietorship'), L('ΙΚΕ / ΕΠΕ', 'ΙΚΕ / ΕΠΕ (private company)'), L('ΑΕ', 'ΑΕ (S.A.)'), L('ΟΕ / ΕΕ', 'ΟΕ / ΕΕ (partnership)')] },
         { q: L('Τι αφορά το θέμα;', 'What does the matter concern?'), chips: [L('Σύσταση / μετατροπή', 'Formation / conversion'), L('Διαφορά εταίρων / μετόχων', 'Partner / shareholder dispute'), L('Σύμβαση με πελάτη / προμηθευτή', 'Customer / supplier contract'), L('Χρέη / αφερεγγυότητα', 'Debts / insolvency')] },
         WHEN
       ]
@@ -121,9 +120,9 @@
       blurb: L('ΑΑΔΕ, έλεγχοι, ΦΠΑ, ρυθμίσεις', 'Tax authority, audits, VAT, settlements'),
       topicEl: 'φορολογικός έλεγχος ΚΦΔ', topicEn: 'tax procedure audit',
       questions: [
-        { q: L('Ποια είναι η ιδιότητά σας;', 'What is your capacity?'), chips: [L('Ιδιώτης / μισθωτός', 'Individual / employee'), L('Ελεύθερος επαγγελματίας', 'Freelancer'), L('Εταιρεία', 'Company')] },
+        { q: L('Ποια είναι η ιδιότητά σου;', 'What is your capacity?'), chips: [L('Ιδιώτης / μισθωτός', 'Individual / employee'), L('Ελεύθερος επαγγελματίας', 'Freelancer'), L('Εταιρεία', 'Company')] },
         { q: L('Τι αφορά το θέμα;', 'What does the matter concern?'), chips: [L('Πρόστιμο / εκκαθαριστικό ΑΑΔΕ', 'AADE fine / assessment'), L('Φορολογικός έλεγχος', 'Tax audit'), L('Ρύθμιση οφειλών / κατασχέσεις', 'Debt settlement / seizures'), L('ΦΠΑ / βιβλία / δηλώσεις', 'VAT / books / returns')] },
-        { q: L('Έχετε λάβει επίσημη πράξη ή ειδοποίηση;', 'Have you received an official notice?'), chips: [L('Ναι, με προθεσμία', 'Yes, with a deadline'), L('Ναι, χωρίς προθεσμία', 'Yes, no deadline'), L('Όχι ακόμη', 'Not yet')] },
+        { q: L('Έχεις λάβει επίσημη πράξη ή ειδοποίηση;', 'Have you received an official notice?'), chips: [L('Ναι, με προθεσμία', 'Yes, with a deadline'), L('Ναι, χωρίς προθεσμία', 'Yes, no deadline'), L('Όχι ακόμη', 'Not yet')] },
         WHEN
       ]
     },
@@ -133,7 +132,7 @@
       blurb: L('Απόλυση, δεδουλευμένα, συμβάσεις', 'Dismissal, unpaid wages, contracts'),
       topicEl: 'εργατικό δίκαιο απόλυση', topicEn: 'employment law dismissal',
       questions: [
-        { q: L('Ποια είναι η ιδιότητά σας;', 'What is your capacity?'), chips: [L('Εργαζόμενος', 'Employee'), L('Εργοδότης', 'Employer')] },
+        { q: L('Ποια είναι η ιδιότητά σου;', 'What is your capacity?'), chips: [L('Εργαζόμενος', 'Employee'), L('Εργοδότης', 'Employer')] },
         { q: L('Τι αφορά το θέμα;', 'What does the matter concern?'), chips: [L('Απόλυση', 'Dismissal'), L('Απλήρωτα / δεδουλευμένα', 'Unpaid wages'), L('Παραίτηση', 'Resignation'), L('Ωράριο / άδειες', 'Hours / leave'), L('Παρενόχληση / εργατικό ατύχημα', 'Harassment / workplace accident')] },
         { q: L('Τι είδους σύμβαση υπάρχει;', 'What type of contract is there?'), chips: [L('Αορίστου χρόνου', 'Indefinite term'), L('Ορισμένου χρόνου', 'Fixed term'), L('Μπλοκάκι / παροχή υπηρεσιών', 'Freelance / service contract'), L('Αδήλωτη εργασία', 'Undeclared work')] },
         WHEN
@@ -180,7 +179,7 @@
       topicEl: 'ευρωπαϊκό δίκαιο ΕΣΔΑ', topicEn: 'European Convention human rights EU law',
       questions: [
         { q: L('Τι αφορά το θέμα;', 'What does the matter concern?'), chips: [L('Ανθρώπινα δικαιώματα (ΕΣΔΑ / ΕΔΔΑ)', 'Human rights (ECHR / ECtHR)'), L('Δίκαιο ΕΕ (καταναλωτής, GDPR, μετακίνηση)', 'EU law (consumer, GDPR, free movement)'), L('Διασυνοριακή διαφορά', 'Cross-border dispute'), L('Άσυλο / μετανάστευση / ιθαγένεια', 'Asylum / migration / citizenship')] },
-        { q: L('Έχουν εξαντληθεί τα εσωτερικά ένδικα μέσα;', 'Have domestic remedies been exhausted?'), chips: [L('Ναι', 'Yes'), L('Όχι', 'No'), L('Δεν ξέρω', 'Not sure')] },
+        { q: L('Έχεις ήδη δοκιμάσει όλες τις δυνατότητες στα ελληνικά δικαστήρια;', 'Have you already tried every option in the Greek courts?'), chips: [L('Ναι', 'Yes'), L('Όχι', 'No'), L('Δεν ξέρω', 'Not sure')] },
         WHEN
       ]
     },

@@ -56,6 +56,27 @@
     return out;
   }
 
+  // ---------- follow-up options ----------
+  // Finds the "Επιλογές … / Options …" heading, takes the bullet list right below it and
+  // returns { before, options, after } so the list can be rendered as clickable chips.
+  function parseOptions(src) {
+    const lines = String(src).replace(/\r/g, '').split('\n');
+    const hi = lines.findIndex((l) => /^#{1,4}\s+.*(Επιλογές|Options)/i.test(l));
+    if (hi < 0) return null;
+    const options = []; let i = hi + 1;
+    while (i < lines.length && !lines[i].trim()) i++;
+    const start = i;
+    for (; i < lines.length; i++) {
+      const m = lines[i].match(/^\s*(?:[-*•]|\d+[.)])\s+(.*\S)\s*$/);
+      if (m) options.push(m[1].replace(/\*\*|__|`/g, '').trim());
+      else if (!lines[i].trim()) continue;
+      else break;
+    }
+    if (!options.length) return null;
+    const opts = options.slice(0, 4).filter(Boolean);
+    return { before: lines.slice(0, hi + 1).join('\n'), options: opts, after: lines.slice(i).join('\n') };
+  }
+
   // ---------- source links ----------
   const strip = (w) => w.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   const STOP = new Set([...STOPWORDS].map(strip));
@@ -178,7 +199,13 @@
       else {
         let prevUser = '';
         for (let j = i - 1; j >= 0; j--) if (c.messages[j].role === 'user') { prevUser = c.messages[j].content; break; }
-        html += '<div class="msg assistant" data-i="' + i + '"><div class="who">' + esc(t('lawyer')) + '</div><div class="bubble md">' + md(m.content) + '</div>' +
+        const isLast = i === c.messages.length - 1 && !streaming;
+        const po = isLast ? parseOptions(m.content) : null;
+        const body = po
+          ? md(po.before) + '<div class="followups" role="group" aria-label="' + esc(t('optionsLabel')) + '">' +
+            po.options.map((o, k) => '<button type="button" class="chip followup" data-follow="' + k + '">' + esc(o) + '</button>').join('') + '</div>' + md(po.after)
+          : md(m.content);
+        html += '<div class="msg assistant" data-i="' + i + '"><div class="who">' + esc(t('lawyer')) + '</div><div class="bubble md">' + body + '</div>' +
           '<div class="actions"><button type="button" class="btn small" data-copy="' + i + '">' + esc(t('copy')) + '</button></div>' +
           sourcesHtml(prevUser, cat) + '</div>';
       }
@@ -336,6 +363,13 @@
     const el = e.target.closest('button,a'); if (!el) return;
     if (el.dataset.cat) return startCase(el.dataset.cat);
     if (el.dataset.chip !== undefined) { const c = cur(); const q = catOf(c).questions[c.step]; return answerIntake(tr(q.chips[+el.dataset.chip]), false); }
+    if (el.dataset.follow !== undefined) {
+      const c = cur(); if (!c || streaming) return;
+      const last = c.messages[c.messages.length - 1]; const po = last && last.role === 'assistant' ? parseOptions(last.content) : null;
+      const text = po && po.options[+el.dataset.follow]; if (!text) return;
+      c.messages.push({ role: 'user', content: text }); c.updated = Date.now(); save();
+      render(); sendChat(); return;
+    }
     if (el.dataset.copy !== undefined) {
       const c = cur(); const m = c.messages[+el.dataset.copy];
       const done = () => { el.textContent = t('copied'); setTimeout(() => { el.textContent = t('copy'); }, 1400); };

@@ -112,6 +112,8 @@ main{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding:0 18px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
 .chip{border:1px solid rgba(201,169,110,.45);background:rgba(201,169,110,.07);color:var(--gold2);padding:8px 14px;border-radius:999px;font-size:14px;transition:.15s;text-align:left}
 .chip:hover{background:rgba(201,169,110,.18)}
+.followups{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px}
+.chip.followup{cursor:pointer;line-height:1.35}
 .composer{display:flex;align-items:flex-end;gap:8px;border:1px solid var(--line);background:var(--panel);border-radius:20px;padding:8px 8px 8px 16px;transition:.15s}
 .composer:focus-within{border-color:rgba(201,169,110,.6);box-shadow:0 0 0 3px rgba(201,169,110,.1)}
 .composer textarea{flex:1;resize:none;background:transparent;border:0;outline:0;color:var(--text);font:inherit;max-height:180px;padding:8px 0;line-height:1.45}
